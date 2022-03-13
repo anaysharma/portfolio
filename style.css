@@ -183,7 +183,7 @@ h1:hover::after {
   }
   
   .project-img {
-    max-width: 500px;
+    max-width: 70vw;
     border-radius: 5px;
   }
 
@@ -193,7 +193,7 @@ h1:hover::after {
   form {
     display: flex;
     flex-flow: column;
-    width: 500px;
+    width: 80vw;
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
     border-radius: 8px;
