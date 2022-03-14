@@ -17,22 +17,16 @@ nav {
     font-size: large;
     font-weight: bold;
     position: fixed;
-    inset: 20px 20px auto auto;
-    background-color: rgba(255, 255, 255, 0.95);
     background-blend-mode: lighten;
     padding: 20px;
-    width: 80px;
+    width: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
     transition: width 0.3s linear;
     overflow-x: hidden;
-}
-
-nav.active {
-    width: 400px;
 }
 
 nav ul {
@@ -61,7 +55,6 @@ nav.active ul li {
 
 nav ul a {
     position: relative;
-    color: #000;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -168,6 +161,20 @@ h1:hover::after {
 }
 
 @media (max-width: 740px) {
+	nav{
+		background-color: black;
+		color: white;
+	    inset: 5px 5px auto auto;
+	}
+	nav.active {
+		width: calc(100% - 10px);
+		padding-right: 30px;
+		color: white;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	}
+	nav ul a {
+	    color: #fff;
+	}
     #about {
         font-family: poppins;
         font-size: 24px;
@@ -205,6 +212,16 @@ h1:hover::after {
 }
 
 @media (min-width: 741px) {
+	nav{
+	    inset: 20px 20px auto auto;
+	    background-color: rgba(255, 255, 255, 0.95);
+	}
+	nav.active {
+	    width: 400px;
+	}
+	nav ul a {
+	    color: #000;
+	}
     #about {
         font-family: poppins;
         font-size: 24px;
@@ -292,17 +309,17 @@ h1:hover::after {
 }
 
 #profile-link {
-    background: linear-gradient(-70deg, #4cc9f0, #4895ef);
+    background: linear-gradient(-70deg, #2a89b0, #4895ef);
     height: 400px;
     display: flex;
     justify-content: safe center;
 }
 
 .link {
+	color: white;
     margin: auto 20px;
     font-family: nunito, "arial";
     font-size: 20px;
-    color: black;
     text-decoration: none;
     font-weight: 600;
     transition: 120ms;
@@ -340,6 +357,11 @@ h1:hover::after {
     border-style: none;
     transition: 200ms;
     padding-left: 20px;
+}
+
+#email > h2 {
+	color: white;
+	font-family: poppins, 'sans-serif';
 }
 .email:hover {
     border: 3px solid gray;
