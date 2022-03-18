@@ -161,20 +161,20 @@ h1:hover::after {
 }
 
 @media (max-width: 740px) {
-	nav{
-		background-color: black;
-		color: white;
-	    inset: 5px 5px auto auto;
-	}
-	nav.active {
-		width: calc(100% - 10px);
-		padding-right: 30px;
-		color: white;
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-	}
-	nav ul a {
-	    color: #fff;
-	}
+    nav {
+        background-color: black;
+        color: white;
+        inset: 5px 5px auto auto;
+    }
+    nav.active {
+        width: calc(100% - 10px);
+        padding-right: 30px;
+        color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
+    nav ul a {
+        color: #fff;
+    }
     #about {
         font-family: poppins;
         font-size: 24px;
@@ -212,16 +212,16 @@ h1:hover::after {
 }
 
 @media (min-width: 741px) {
-	nav{
-	    inset: 20px 20px auto auto;
-	    background-color: rgba(255, 255, 255, 0.95);
-	}
-	nav.active {
-	    width: 400px;
-	}
-	nav ul a {
-	    color: #000;
-	}
+    nav {
+        inset: 20px 20px auto auto;
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+    nav.active {
+        width: 400px;
+    }
+    nav ul a {
+        color: #000;
+    }
     #about {
         font-family: poppins;
         font-size: 24px;
@@ -316,7 +316,7 @@ h1:hover::after {
 }
 
 .link {
-	color: white;
+    color: white;
     margin: auto 20px;
     font-family: nunito, "arial";
     font-size: 20px;
@@ -360,8 +360,8 @@ h1:hover::after {
 }
 
 #email > h2 {
-	color: white;
-	font-family: poppins, 'sans-serif';
+    color: white;
+    font-family: poppins, "sans-serif";
 }
 .email:hover {
     border: 3px solid gray;
