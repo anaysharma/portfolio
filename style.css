@@ -4,6 +4,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -241,26 +242,34 @@ h1:hover::after {
         height: 100vh;
         display: grid;
         place-items: center;
+        transform-style: preserve-3d;
     }
 
     .project-img {
         max-height: 220px;
         border-radius: 5px;
-        transition: ease-out 200ms;
+        transition: ease-out 300ms;
     }
     .project-img:hover {
-        transform: scale(1.085);
-        border-radius: 0px;
+        transform:
+        translateZ(130px)
+        rotate3d(1, 0, 0, -60deg);
     }
+    
     #project-tile {
         margin: 10px 0;
-        transition: ease-out 200ms;
+        transition: ease-out 300ms;
+        transform-style: preserve-3d;
     }
 
     #project-tile:hover {
-        transform: scale(1.06);
-        box-shadow: 0 0 60px -15px black;
-        background-color: rgb(20, 25, 40);
+        z-index: 100;
+        height: 200px;
+        transform:
+            translateY(120px)
+            rotate3d(1, 0, 0, 60deg);
+        background-color: rgba(40, 40, 50, 0.8);
+        box-shadow: 0 60px 25px -20px rgba(0, 0, 0, 0.6);
     }
     form {
         display: flex;
@@ -273,8 +282,8 @@ h1:hover::after {
 }
 
 #project-tile {
+    overflow: visible !important;
     padding: 10px;
-    overflow: hidden;
     border-radius: 10px;
     background-color: rgba(40, 40, 50, 1);
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.6);
@@ -285,7 +294,6 @@ h1:hover::after {
     font-family: poppins, "sans-serif";
     font-size: 20px;
     margin: 5px 0 0 0;
-    text-decoration: none;
     transition: 200ms;
 }
 
@@ -306,6 +314,7 @@ h1:hover::after {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto 40px auto;
+    perspective: 1000px;
 }
 
 #profile-link {
