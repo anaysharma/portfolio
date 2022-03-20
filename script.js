@@ -41,10 +41,30 @@ function myFunction() {
 	} else if (scrollTop + 2 > scrollPosition * 2 && scrollTop + 2 < scrollPosition * 3) {
 		dom.style.backgroundImage =
 			getCssValuePrefix() + "linear-gradient( 40deg, rgb(20, 200, 100), rgb(10, 160, 120)";
-	} else if (scrollTop + 2 > scrollPosition * 3 && scrollTop + 2 < scrollPosition * 4) {
-		dom.style.backgroundImage =
-			getCssValuePrefix() + "linear-gradient( 50deg, #2a89b0, #4895ef)";
-	} else {
-		elem.className = "site-main";
 	}
 }
+
+const dialog = document.getElementById('modal');
+const openModal = document.getElementById('email-button');
+const closeModal = document.querySelector('.email-submit');
+var cancel = document.getElementById('cancel-button')
+
+function openCheck(dialog) {
+	if(dialog.open) {
+		console.log('dialog open');
+	} else {
+		console.log('dialog close');
+	}
+}
+
+openModal.addEventListener('click' , function() {
+	dialog.showModal();
+});
+
+cancel.addEventListener('click' , function() {
+	dialog.close();
+});
+
+closeModal.addEventListener('click', function() {
+	dialog.close();
+});

@@ -28,7 +28,7 @@ nav {
 	font-weight: bold;
 	position: fixed;
 	padding: 20px;
-	width: 70px;
+	width: 65px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -65,7 +65,7 @@ nav.active ul li {
 nav ul a {
 	position: relative;
 	text-decoration: none;
-	margin: 0 10px;
+	margin: 0 20px;
 }
 
 .icon {
@@ -87,8 +87,8 @@ nav ul a {
 	height: 2px;
 	width: 20px;
 	position: absolute;
-	top: 8px;
-	left: 5px;
+	top: 6px;
+	left: 2px;
 	transition: transform 0.35s linear;
 }
 
@@ -98,11 +98,11 @@ nav ul a {
 }
 
 nav.active .icon .line1 {
-	transform: rotate(-405deg) translateY(8.5px);
+	transform: rotate(-405deg) translateY(6.5px);
 }
 
 nav.active .icon .line2 {
-	transform: rotate(405deg) translateY(-8.5px);
+	transform: rotate(405deg) translateY(-6.5px);
 }
 
 ul {
@@ -158,12 +158,7 @@ h1:hover::after {
 #about {
 	font-family: poppins;
 	font-size: 24px;
-	color: white; /*
-	background: linear-gradient(
-		60deg,
-		var(--about-color-one) 60%,
-		var(--about-color-two)
-	);*/
+	color: white;
 	height: 100vh;
 }
 
@@ -269,14 +264,6 @@ h1:hover::after {
 		background-color: rgba(40, 40, 50, 0.8);
 		box-shadow: 0 60px 25px -20px rgba(0, 0, 0, 0.6);
 	}
-	form {
-		display: flex;
-		flex-flow: column;
-		width: 60vw;
-		background: rgba(0, 0, 0, 0.6);
-		padding: 30px;
-		border-radius: 8px;
-	}
 }
 
 #project-tile {
@@ -294,15 +281,6 @@ h1:hover::after {
 	margin: 5px 0 0 0;
 	transition: 200ms;
 }
-
-/*#projects {
-	background: linear-gradient(
-		60deg,
-		var(--work-color-one),
-		var(--work-color-two)
-	);
-}
-*/
 #projects > p {
 	font-family: raleway, sans-serif;
 	color: white;
@@ -320,19 +298,21 @@ h1:hover::after {
 }
 
 #profile-link {
-	/*background: linear-gradient(
-		-70deg,
-		var(--socials-color-one),
-		var(--socials-color-two)
-	);*/
 	height: 100vh;
 	display: flex;
 	justify-content: safe center;
 }
 
 .link {
-	color: white;
-	margin: auto 20px;
+    height: 40px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+	color: black;
+	margin: auto 20px auto 0;
 	font-family: nunito, "arial";
 	font-size: 20px;
 	text-decoration: none;
@@ -341,63 +321,101 @@ h1:hover::after {
 }
 
 .link:hover {
-	text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.8);
 	transform: translateY(-2px);
 }
 
-#email {
-	display: flex;
-	flex-flow: column;
-	justify-content: safe center;
-	align-items: center;
-	height: 100vh;
-	/*background: linear-gradient(
-		40deg,
-		var(--contact-color-one),
-		var(--contact-color-two)
-	);*/
-	font-family: quicksand, "sans-serif";
+.text, .email {
+    background-color: white;
+    color: black;
+    border-style: none;
+    font-family: poppins, "sans-serif";
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .text {
-	height: 100px;
-	border-radius: 3px;
-	border-style: none;
-	transition: 200ms;
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
 }
 
-.text:hover {
-	border: 3px solid gray;
-}
 .email {
-	margin: 10px 0;
-	height: 40px;
-	border-radius: 3px;
-	border-style: none;
-	transition: 200ms;
-	padding-left: 20px;
+    margin: 0 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
 }
 
-#email > h2 {
-	color: white;
-	font-family: poppins, "sans-serif";
+#modal {
+    width: 700px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgba(230, 255, 240, 1);
+    height: 360px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px -20px rgba(0, 0, 0, 0.5);
 }
-.email:hover {
-	border: 3px solid gray;
+
+#modal::backdrop {
+    background: white;
+    opacity: 0.2;
 }
-form > button {
-	width: 100px;
-	margin-left: auto;
-	border-radius: 3px;
-	background-color: rgba(0, 100, 200, 1);
-	border-style: none;
-	height: 30px;
-	font-family: poppins, "sans-serif";
-	font-size: 16px;
-	color: white;
-	transition: 200ms;
+
+.close-icon {
+    opacity: 0.6;
+    height: 20px;
+    width: 20px;
 }
-form > button:hover {
-	transform: scale(1.06);
-	box-shadow: 0 0 20px -5px black;
+
+#cancel-button {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#email-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 140px;
+    margin: auto 0;
+    border-radius: 3px;
+    border-style: none;
+    font-size: 18px;
+    font-family: poppins, 'sans-serif;';
+}
+
+.email-submit {
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    font-family: poppins, 'sans-serif;';
+    height: 40px;
+    border-style: none;
+    border-radius: 3px;
+    width: 120px;
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.email-submit:hover {
+    background-color: rgba(0, 0, 255, 1.0);
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.8);
+}
+
+#email-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.8);
+    background-color: white;
+}
+
+.icon {
+    margin: 0 6px 0 0;
+    opacity: 0.8;
+    width: 25px;
+    height: 25px;
 }

@@ -14,7 +14,6 @@
 		<ul>
 			<li><a href="#about">about</a></li>
 			<li><a href="#projects">work</a></li>
-			<li><a href="#email">Contact</a></li>
 			<li><a href="#profile-link">socials</a></li>
 		</ul>
 		<button class="icon" id="toggle">
@@ -32,7 +31,7 @@
 		<p class="about-details">
 			welcome to my portfolio,
 			i am a student at <a href="">SAM college of engineering and technology</a>,<br>and a passionate learner.<br> my
-			some other interests are robotics, painting and gaming.<br><br>look around on my portfolio, enjoy!
+			some other interests are robotics, painting and gaming.
 		</p>
 	</section>
 
@@ -40,38 +39,49 @@
 		<p>my work</p>
 		<div class="project">
 			<a id="project-tile" href="https://codepen.io/anaysharma/pen/PoOMbvE">
-				<img class="project-img" src="survey.png">
+				<img class="project-img" src="./assets/survey.png">
 				<p class="project-title">Survey Form</p>
 			</a>
 			<a id="project-tile" href="https://codepen.io/anaysharma/pen/qBVOjmj">
-				<img class="project-img" src="tribute.png">
+				<img class="project-img" src="./assets/tribute.png">
 				<p class="project-title">Tribute Page</p>
 			</a>
 			<a id="project-tile" href="https://codepen.io/anaysharma/pen/vYWozmv">
-				<img class="project-img" src="product.png">
+				<img class="project-img" src="./assets/product.png">
 				<p class="project-title">Product Page</p>
 			</a>
 			<a id="project-tile" href="https://codepen.io/anaysharma/pen/KKZPgMp">
-				<img class="project-img" src="doq.png">
+				<img class="project-img" src="./assets/doq.png">
 				<p class="project-title">Documentation</p>
 			</a>
 		</div>
 	</section>
 
-	<section id="email" class="three">
-		<h2 class="form-title">have feedback or want to talk? email me!</h2>
-		<form action="https://formsubmit.co/anaysharma8791@gmail.com" method="POST">
-			<input class="text" type="text" name="name" required>
-			<input class="email" type="email" name="email" placeholder="E-mail" required>
-			<button class="email-submit" type="submit">send</button>
-		</form>
+	<section id="profile-link">
+		<a class="link" href="https://github.com/anaysharma">
+			<img class="icon" src="./assets/github.png">Github
+		</a>
+		<a class="link" href="https://www.freecodecamp.org/Anay">
+			<img class="icon" src="./assets/free-code-camp.png">Free Code Camp
+		</a>
+		<a class="link" href="https://www.linkedin.com/in/anay-sharma-b3785321a">
+			<img class="icon" src="./assets/linkedin.png">Linkedin
+		</a>
+		<button id="email-button">
+			<img class="icon" src="./assets/email.png">Email me
+		</button>
 	</section>
 
-	<section id="profile-link" class="four">
-		<a class="link" href="https://github.com/anaysharma">Github</a>
-		<a class="link" href="https://www.freecodecamp.org/Anay">Free Code Camp</a>
-		<a class="link" href="https://www.linkedin.com/in/anay-sharma-b3785321a">Linkedin</a>
-	</section>
+	<dialog id="modal">
+		<button id="cancel-button">
+			<img class="close-icon" src="./assets/close.png">
+		</button>
+		<form action="https://formsubmit.co/anaysharma8791@gmail.com" method="dialog">
+			<textarea rows="6" class="text" type="text" name="name" placeholder="type here" required></textarea>
+			<input class="email" type="email" name="email" placeholder="your E-mail" required>
+			<button class="email-submit" type="submit">send</button>
+		</form>
+	</dialog>
 
 	<script src="script.js"></script>
 </body>
