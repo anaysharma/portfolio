@@ -44,27 +44,27 @@ function myFunction() {
 	}
 }
 
-const dialog = document.getElementById('modal');
-const openModal = document.getElementById('email-button');
-const closeModal = document.querySelector('.email-submit');
-var cancel = document.getElementById('cancel-button')
+const dialog = document.getElementById("modal");
+const openModal = document.getElementById("email-button");
+const closeModal = document.querySelector(".email-submit");
+var cancel = document.getElementById("cancel-button");
 
 function openCheck(dialog) {
-	if(dialog.open) {
-		console.log('dialog open');
+	if (dialog.open) {
+		console.log("dialog open");
 	} else {
-		console.log('dialog close');
+		console.log("dialog close");
 	}
 }
 
-openModal.addEventListener('click' , function() {
+openModal.addEventListener("click", function () {
 	dialog.showModal();
 });
 
-cancel.addEventListener('click' , function() {
+cancel.addEventListener("click", function () {
 	dialog.close();
 });
 
-closeModal.addEventListener('click', function() {
+closeModal.addEventListener("click", function () {
 	dialog.close();
 });
