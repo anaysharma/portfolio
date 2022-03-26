@@ -4,11 +4,10 @@
 * {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	transition: 300ms;
 }
 
 body {
-	background-color: rgb(48, 50, 55);
+	transition: 1s;
 	display: grid;
 	margin: 0;
 	--about-color-one: rgb(48, 50, 55);
@@ -19,6 +18,18 @@ body {
 	--contact-color-two: rgb(10, 160, 120);
 	--socials-color-one: #2a89b0;
 	--socials-color-two: #4895ef;
+}
+
+.color-1 {
+	background: linear-gradient(70deg, var(--about-color-one) 75%, var(--about-color-two));
+}
+
+.color-2 {
+	background: linear-gradient(45deg, var(--work-color-one), var(--work-color-two));
+}
+
+.color-3 {
+	background: linear-gradient(40deg, var(--contact-color-one), var(--contact-color-two));
 }
 
 nav {
@@ -119,9 +130,11 @@ h1 {
 	width: fit-content;
 	cursor: default;
 }
+
 h1:hover {
 	transform: skew(10deg);
 }
+
 h1::before {
 	content: attr(data-name);
 	position: absolute;
@@ -133,6 +146,7 @@ h1::before {
 	transition: all 300ms ease;
 	padding-left: 20px;
 }
+
 h1:hover::before {
 	top: -4px;
 	left: 0px;
@@ -150,6 +164,7 @@ h1::after {
 	background: violet;
 	transition: all 300ms ease;
 }
+
 h1:hover::after {
 	width: 120%;
 	outline: 5px solid rgba(48, 50, 55, 1);
@@ -166,6 +181,7 @@ h1:hover::after {
 	font-size: 20px;
 	color: rgb(220, 220, 220);
 }
+
 #about > p > a {
 	text-decoration: none;
 	color: white;
@@ -182,19 +198,23 @@ h1:hover::after {
 		color: white;
 		inset: 5px 5px auto auto;
 	}
+
 	nav.active {
 		width: calc(100% - 10px);
 		padding-right: 30px;
 		color: white;
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 	}
+
 	nav ul a {
 		color: #fff;
 	}
+
 	#about {
 		justify-content: safe center;
 		padding: 100px 0 40px 8vw;
 	}
+
 	#projects {
 		display: grid;
 		place-items: center;
@@ -208,6 +228,7 @@ h1:hover::after {
 	#project-tile {
 		margin: 10px auto;
 	}
+
 	form {
 		display: flex;
 		flex-flow: column;
@@ -223,18 +244,22 @@ h1:hover::after {
 		inset: 20px 20px auto auto;
 		background-color: rgba(255, 255, 255, 0.95);
 	}
+
 	nav.active {
 		width: 400px;
 	}
+
 	nav ul a {
 		color: #000;
 	}
+
 	#about {
 		display: flex;
 		flex-flow: column;
 		justify-content: safe center;
 		padding: 0 0 60px 8vw;
 	}
+
 	#projects {
 		height: 100vh;
 		display: grid;
@@ -248,8 +273,9 @@ h1:hover::after {
 		border-radius: 5px;
 		transition: ease-out 300ms;
 	}
+
 	.project-img:hover {
-		transform: translateZ(130px) rotate3d(1, 0, 0, -60deg);
+		transform: translateZ(120px) rotate3d(1, 0, 0, -55deg);
 	}
 
 	#project-tile {
@@ -259,10 +285,9 @@ h1:hover::after {
 	}
 
 	#project-tile:hover {
-		/*height: 200px;*/
-		transform: translateY(100px) rotate3d(1, 0, 0, 60deg) scaleY(0.8);
+		transform: translateY(80px) rotate3d(1, 0, 0, 60deg) scaleY(0.8);
 		background-color: rgba(60, 60, 70, 1);
-		box-shadow: 0 60px 25px -20px rgba(0, 0, 0, 0.6);
+		box-shadow: 0 40px 35px -20px rgba(0, 0, 0, 0.6);
 	}
 }
 
@@ -274,13 +299,15 @@ h1:hover::after {
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.6);
 	text-decoration: none;
 }
+
 .project-title {
-	color: white;
+	color: rgba(255, 255, 255, 0.8);
 	font-family: poppins, "sans-serif";
 	font-size: 20px;
 	margin: 5px 0 0 0;
 	transition: 200ms;
 }
+
 #projects > p {
 	font-family: raleway, sans-serif;
 	color: white;
@@ -294,7 +321,7 @@ h1:hover::after {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 auto 40px auto;
-	perspective: 1500px;
+	perspective: 1400px;
 }
 
 #profile-link {
@@ -304,13 +331,13 @@ h1:hover::after {
 }
 
 .link {
-    height: 40px;
-    border-radius: 3px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
+	height: 40px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.6);
 	color: black;
 	margin: auto 20px auto 0;
 	font-family: nunito, "arial";
@@ -321,101 +348,101 @@ h1:hover::after {
 }
 
 .link:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.8);
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.8);
 	transform: translateY(-2px);
 }
 
-.text, .email {
-    background-color: white;
-    color: black;
-    border-style: none;
-    font-family: poppins, "sans-serif";
-    font-size: 16px;
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.text,
+.email {
+	background-color: white;
+	color: black;
+	border-style: none;
+	font-family: poppins, "sans-serif";
+	font-size: 16px;
+	border-radius: 3px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .text {
-    margin: 10px;
-    padding: 10px;
-    width: calc(100% - 20px);
+	margin: 10px;
+	padding: 10px;
+	width: calc(100% - 20px);
 }
 
 .email {
-    margin: 0 10px;
-    padding: 10px;
-    width: calc(100% - 20px);
+	margin: 0 10px;
+	padding: 10px;
+	width: calc(100% - 20px);
 }
 
 #modal {
-    width: 700px;
-    border-style: none;
-    border-radius: 5px;
-    background-color: rgba(230, 255, 240, 1);
-    height: 360px;
-    overflow: hidden;
-    box-shadow: 0 15px 50px -20px rgba(0, 0, 0, 0.5);
+	width: 700px;
+	border-style: none;
+	border-radius: 5px;
+	background-color: rgba(230, 255, 240, 1);
+	height: 360px;
+	overflow: hidden;
+	box-shadow: 0 15px 50px -20px rgba(0, 0, 0, 0.5);
 }
 
 #modal::backdrop {
-    background: white;
-    opacity: 0.2;
+	background: white;
+	opacity: 0.2;
 }
 
 .close-icon {
-    opacity: 0.6;
-    height: 20px;
-    width: 20px;
+	opacity: 0.6;
+	height: 20px;
+	width: 20px;
 }
 
 #cancel-button {
-    border-style: none;
-    background-color: rgba(0, 0, 0, 0);
+	border-style: none;
+	background-color: rgba(0, 0, 0, 0);
 }
 
 #email-button {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 7px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    width: 140px;
-    margin: auto 0;
-    border-radius: 3px;
-    border-style: none;
-    font-size: 18px;
-    font-family: poppins, 'sans-serif;';
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 7px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	width: 140px;
+	margin: auto 0;
+	border-radius: 3px;
+	border-style: none;
+	font-size: 18px;
+	font-family: poppins, "sans-serif";
 }
 
 .email-submit {
-    margin: 10px;
-    font-size: 16px;
-    color: white;
-    font-family: poppins, 'sans-serif;';
-    height: 40px;
-    border-style: none;
-    border-radius: 3px;
-    width: 120px;
-    background-color: rgba(0, 0, 255, 0.6);
+	margin: 10px;
+	font-size: 16px;
+	color: white;
+	font-family: poppins, "sans-serif";
+	height: 40px;
+	border-style: none;
+	border-radius: 3px;
+	width: 120px;
+	background-color: rgba(0, 0, 255, 0.6);
 }
 
 .email-submit:hover {
-    background-color: rgba(0, 0, 255, 1.0);
-    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 255, 1);
+	box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.8);
 }
 
 #email-button:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.8);
-    background-color: white;
+	transform: scale(1.06);
+	box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.8);
+	background-color: white;
 }
 
 .icon {
-    margin: 0 6px 0 0;
-    opacity: 0.8;
-    width: 25px;
-    height: 25px;
+	margin: 0 6px 0 0;
+	opacity: 0.8;
+	width: 25px;
+	height: 25px;
 }

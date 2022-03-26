@@ -14,7 +14,6 @@ function getCssValuePrefix() {
 			rtrnVal = prefixes[i];
 		}
 	}
-
 	dom = null;
 	delete dom;
 
@@ -22,7 +21,6 @@ function getCssValuePrefix() {
 }
 
 var dom = document.getElementById("body");
-
 var scrollPosition = window.innerHeight;
 
 window.onscroll = function () {
@@ -34,13 +32,11 @@ function myFunction() {
 	var elem = document.getElementById("body");
 
 	if (scrollTop + 2 > 0 && scrollTop + 2 < scrollPosition) {
-		dom.style.background = "rgb(48, 50, 55)";
+		body.className = "color-1";
 	} else if (scrollTop + 2 > scrollPosition && scrollTop + 2 < scrollPosition * 2) {
-		dom.style.backgroundImage =
-			getCssValuePrefix() + "linear-gradient( 45deg, #b5179e, #7209b7)";
+		dom.className = "color-2";
 	} else if (scrollTop + 2 > scrollPosition * 2 && scrollTop + 2 < scrollPosition * 3) {
-		dom.style.backgroundImage =
-			getCssValuePrefix() + "linear-gradient( 40deg, rgb(20, 200, 100), rgb(10, 160, 120)";
+		dom.className = "color-3";
 	}
 }
 
